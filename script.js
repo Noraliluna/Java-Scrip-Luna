@@ -1,4 +1,4 @@
-
+/*
 let productos = parseFloat(prompt("¿Cuántas prendas compra?"));
 let acumulador = 0;
 let contador = 0;
@@ -51,4 +51,42 @@ if (tarjeta == "santander"){
     }else{
         console.log("No se le efectura el descuento.")
     }
+}
+*/
+
+class Mercaderia {
+    constructor (nombre, talle, color, precio){
+        this.nombre = nombre;
+        this.talle = talle;
+        this.color = color;
+        this.precio = precio;
+    }
+}
+
+const producto001 = new Mercaderia("Tapado", "M", "Negro", 24000);
+const producto002 = new Mercaderia("Remera Lisa", "S", "Bordo", 700);
+const producto003 = new Mercaderia("Campera Polar", "M", "Mostaza", 10000);
+const producto004 = new Mercaderia("Pantalon Cuadrille", "M", "Gris", 3000);
+const producto005 = new Mercaderia("Camisa Leñadora", "M", "Amarilla", 1000);
+const producto006 = new Mercaderia("Blusa Floreada", "L", "Gris", 4000);
+const producto007 = new Mercaderia("Tapado Paris", "M", "Gris y Negro", 20000);
+const producto008 = new Mercaderia("Tapado", "M", "Gris", 15000);
+const producto009 = new Mercaderia("Pantalon", "M", "Azul", 4000);
+const producto010 = new Mercaderia("Remera", "M", "Blanca", 1000);
+
+const productos = [producto001, producto002, producto003, producto004, producto005
+, producto006, producto007, producto008, producto009, producto010];
+
+console.log(productos);
+
+/*ARMANDO MI CARRITO*/
+
+let inicio = (prompt("¿Desea agregar este producto a su carrito?")).toLocaleLowerCase;
+
+if (inicio == "si"){
+    const carrito = [productos.slice(0, 9, 3)];
+
+    console.log(carrito)
+}else{
+    console.log("Agradecemos su visita por nuestra página.")
 }
